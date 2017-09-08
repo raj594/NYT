@@ -1,44 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
-  <meta charset="utf-8">
-  <title>NYT Search</title>
-  <style type="text/css">
-    button,
-    div,
-    form,
-    input {
-      margin: 10px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>New York Times Search</title>
+  <link rel="shortcut icon" href="./assets/images/favicon.png"/>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css"> 
+
 </head>
 
 <body>
 
+  <!-- Header --> 
+  <div class="col-md-12">
+    <div class="row">
+      <header class="header">
+            <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span> New York Times Search
+      </header>
+    </div>
+  </div>
+
+  <!-- Actual Body --> 
   <div class="container">
-    <h1>Article Search History</h1>
 
-    
-    <!-- Rendered Buttons will get Dumped Here  -->
-    <div id="buttons-view"></div>
+    <!--Search and Button Area --> 
+      <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-title">Search Parameters</div>
+        </div>
 
-    <form id="movie-form">
-      <label for="movie-input">Search the news</label>
-      <input type="text" id="movie-input"><br>
+        <div class="panel-body">
 
-      <!-- Button triggers new movie to be added -->
-      <input id="add-movie" type="submit" value="Add a Movie Bro">
-    </form>
+          <form id="Form">
+            <input type="text" id="searchinput"><br><br>
+            <input id="addsearch" type="submit" value="Add Search">
+          </form>
+          <br>
+          <div id="buttons">Buttons go here</div>
 
-    <!-- Movies will Get Dumped Dere -->
-    <div id="articles-view"></div>
+        </div>
+      </div>
+      </div>
+
+    <!--Results Area--> 
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-title" id="searchID">Top Articles</div> 
+        </div>
+
+        <div class="panel-body">
+        Results 
 
 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div class="row">
+      <footer class="footer">
+          (Footer)
+      </footer>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript CDN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- my JavaScript File  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
-    
-  </div>
+
 </body>
 
 </html>
