@@ -1,8 +1,15 @@
 function displayArticles() {
 
-        var topic = $(this).attr("data-name");
+        
 
         // Built by LucyBot. www.lucybot.com
+        var topic = $("#topicSearch").val();
+        var beginYear = $("#startYear").val() + "0101";
+        var endYear = $("#endYear").val() + "1231";
+        console.log(topic);
+        console.log(beginYear);
+        console.log(endYear);
+
         var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
         url += '?' + $.param({
           'api-key': "7691f22a659a4646b86c84e7652c96c5",
@@ -15,7 +22,7 @@ function displayArticles() {
           method: 'GET',
         }).done(function(result) {
           console.log(result);
-          $("#articles-view").empty();
+          $("#results").empty();
           var docs = result.response.docs;
 
           for (var i = 0; i < docs.length; i++) {
@@ -26,7 +33,7 @@ function displayArticles() {
             nextDoc.append(newLink)
             //var p = $('<p>');
             //p.text(docs[i].snippet);
-            $("#articles-view").append(nextDoc);
+            $("#results").append(nextDoc);
           }
 
 
@@ -36,33 +43,9 @@ function displayArticles() {
 
       }
 
-      function renderButtons() {
-
-        $("#buttons-view").empty();
-
-        for (var i = 0; i < movies.length; i++) {
-
-          var a = $("<button>");
-          a.addClass("movie");
-          a.attr("data-name", movies[i]);
-          a.text(movies[i]);
-          $("#buttons-view").append(a);
-
-        }
-      }
-
-      // This function handles events where a movie button is clicked
-      $("#add-movie").on("click", function(event) {
-        event.preventDefault();
-        var movie = $("#movie-input").val().trim();
-        movies.push(movie);
 
 
-        renderButtons();
-      });
 
       
-      $(document).on("click", ".searchArticles", displayArticles);
+      $(document).on("click", "#search", displayArticles);
 
-      // Calling the renderButtons function to display the intial buttons
-      renderButtons();

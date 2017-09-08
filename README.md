@@ -1,2 +1,0 @@
-# NYT
-ny times search
