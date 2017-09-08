@@ -31,6 +31,11 @@ button {
   color: gray;
 }
 
+label, input {
+  float: left;
+  margin-top: 10px; 
+}
+
 footer {
     width: 100%;
     height: 60px;
