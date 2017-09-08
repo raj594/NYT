@@ -30,7 +30,7 @@
   <!-- Actual Body --> 
   <div class="container">
 
-    <!--Search and Button Area --> 
+    <!--Search and Buttons --> 
       <div class="col-md-12">
       <div class="panel panel-default">
         <div class="panel-heading">
@@ -39,12 +39,9 @@
 
         <div class="panel-body">
 
-          <form id="Form">
-            <input type="text" id="searchinput"><br><br>
-            <input id="addsearch" type="submit" value="Add Search">
-          </form>
-          <br>
-          <div id="buttons">Buttons go here</div>
+
+        <button type="button" class="btn btn-outline-secondary" id="search">Search</button>
+        <button type="button" class="btn btn-outline-secondary" id="clearResults">Clear Results</button>
 
         </div>
       </div>
@@ -59,8 +56,6 @@
 
         <div class="panel-body">
         Results 
-
-
         </div>
       </div>
     </div>
@@ -74,12 +69,12 @@
     </div>
   </div>
 
+  <!-- jQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Bootstrap JavaScript CDN -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
   <!-- my JavaScript File  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
+  <script type="text/javascript" src="./assets/javascript/game.js"></script>
 
 </body>
 
